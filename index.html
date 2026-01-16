@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fábio Rodrigues Costa - Desenvolvedor Front-end</title>
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Configuração customizada do Tailwind para Dark Mode -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f5f3ff',
+                            100: '#ede9fe',
+                            200: '#ddd6fe',
+                            300: '#c4b5fd',
+                            400: '#a78bfa',
+                            500: '#8b5cf6',
+                            600: '#7c3aed',
+                            700: '#6d28d9',
+                            800: '#5b21b6',
+                            900: '#4c1d95',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Fontes do Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS Customizado -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark bg-gradient-dark text-gray-100">
+    
+    <!-- Header / Navegação -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-slate-900/80 backdrop-blur-md border-b border-slate-800">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
+                <!-- Nome -->
+                <h1 class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-primary-600">
+                    Fábio Rodrigues
+                </h1>
+                
+                <!-- Links de navegação -->
+                <ul class="flex flex-wrap gap-6 sm:gap-8 text-sm sm:text-base">
+                    <li>
+                        <a href="#sobre" class="text-gray-300 hover:text-primary-400 transition-colors duration-300">
+                            Sobre
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#projetos" class="text-gray-300 hover:text-primary-400 transition-colors duration-300">
+                            Projetos
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contato" class="text-gray-300 hover:text-primary-400 transition-colors duration-300">
+                            Contato
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Hero Section -->
+    <section id="sobre" class="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+        <div class="container mx-auto max-w-4xl">
+            <div class="fade-in text-center space-y-6">
+                <!-- Título principal -->
+                <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                    Desenvolvedor Front-end
+                    <span class="block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-primary-400 via-primary-500 to-primary-600">
+                        focado em interfaces responsivas
+                    </span>
+                    <span class="block mt-2">
+                        e experiências interativas
+                    </span>
+                </h2>
+                
+                <!-- Subtítulo -->
+                <p class="text-lg sm:text-xl md:text-2xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
+                    Desenvolvedor Front-end em constante evolução, iniciando a graduação em engenharia de software e apaixonado por transformar designs em código limpo e responsivo.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Seção de Projetos -->
+    <section id="projetos" class="py-20 px-4 sm:px-6 lg:px-8 bg-slate-900/50">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 sm:mb-16">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-primary-600">
+                    Projetos em Destaque
+                </span>
+            </h2>
+            
+            <!-- Grid de projetos -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                
+                <!-- Card 1: Alura Books JS -->
+                <article class="project-card bg-slate-800 rounded-xl overflow-hidden border border-slate-700 shadow-lg flex flex-col h-full" data-aos="fade-up">
+                    <!-- Imagem do Projeto -->
+                    <div class="w-full h-48 overflow-hidden border-b border-slate-700">
+                        <img src="img/Alura-books-js.png" alt="Preview do Alura Books JS" class="w-full h-full object-cover object-top transition-transform duration-500 hover:scale-110">
+                    </div>
+
+                    <div class="p-6 sm:p-8 space-y-4 flex-grow flex flex-col">
+                        <!-- Título -->
+                        <div class="flex items-center gap-3">
+                            <h3 class="text-xl font-bold text-gray-100">Alura Books JS</h3>
+                        </div>
+                        
+                        <!-- Descrição -->
+                        <p class="text-gray-400 leading-relaxed text-sm">
+                            Projeto completo desenvolvido em JavaScript puro com integração de API REST, 
+                            implementação de filtros dinâmicos e manipulação avançada de arrays.
+                        </p>
+
+                        <!-- Destaques -->
+                        <div class="pt-2 flex-grow">
+                            <p class="text-sm font-semibold text-primary-400 mb-2">Principais Tecnologias:</p>
+                            <ul class="space-y-1 text-sm text-gray-400">
+                                <li class="flex items-center gap-2">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-primary-500"></span>
+                                    Integração com API
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-primary-500"></span>
+                                    Fetch API
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-primary-500"></span>
+                                    Filtros e Lógica de Arrays
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Botões de ação -->
+                        <div class="pt-4 flex flex-col sm:flex-row gap-3">
+                            <a href="https://github.com/fabiorodrigues12223/alura-books-js" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            class="flex-1 px-4 py-2.5 bg-primary-600 hover:bg-primary-700 text-white rounded-lg font-medium text-center transition-colors duration-300">
+                                Ver Código
+                            </a>
+                            <a href="https://fabiorodrigues12223.github.io/alura-books-js/"
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            class="flex-1 px-4 py-2.5 border border-primary-600 text-primary-400 hover:bg-primary-600/10 rounded-lg font-medium text-center transition-all duration-300">
+                                Ver Projeto
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                
+                <!-- Card 2: Mobile First -->
+                <article class="project-card bg-slate-800 rounded-xl overflow-hidden border border-slate-700 shadow-lg flex flex-col h-full" data-aos="fade-up" data-aos-delay="100">
+                    <!-- Imagem do Projeto -->
+                    <div class="w-full h-48 overflow-hidden border-b border-slate-700">
+                        <img src="img/Mobile-first.png" alt="Preview do Mobile First" class="w-full h-full object-cover object-top transition-transform duration-500 hover:scale-110">
+                    </div>
+
+                    <div class="p-6 sm:p-8 space-y-4 flex-grow flex flex-col">
+                        <!-- Título -->
+                        <div class="flex items-center gap-3">
+                            <h3 class="text-xl font-bold text-gray-100">Alura Books: Mobile First</h3>
+                        </div>
+                        
+                        <!-- Descrição -->
+                        <p class="text-gray-400 leading-relaxed text-sm">
+                            Site focado em performance e adaptabilidade, desenvolvido com a metodologia Mobile First 
+                            e uso avançado de Media Queries para garantir a melhor experiência em qualquer dispositivo.
+                        </p>
+
+                        <!-- Destaques -->
+                        <div class="pt-2 flex-grow">
+                            <p class="text-sm font-semibold text-primary-400 mb-2">Principais Tecnologias:</p>
+                            <ul class="space-y-1 text-sm text-gray-400">
+                                <li class="flex items-center gap-2">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-primary-500"></span>
+                                    Metodologia Mobile First
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-primary-500"></span>
+                                    CSS Flexbox & Grid
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-primary-500"></span>
+                                    Design Responsivo
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Botões de ação -->
+                        <div class="pt-4 flex flex-col sm:flex-row gap-3">
+                            <a href="https://github.com/fabiorodrigues12223/projeto-mobile-first" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            class="flex-1 px-4 py-2.5 bg-primary-600 hover:bg-primary-700 text-white rounded-lg font-medium text-center transition-colors duration-300">
+                                Ver Código
+                            </a>
+                            <a href="https://fabiorodrigues12223.github.io/projeto-mobile-first/"
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            class="flex-1 px-4 py-2.5 border border-primary-600 text-primary-400 hover:bg-primary-600/10 rounded-lg font-medium text-center transition-all duration-300">
+                                Ver Projeto
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                
+                <!-- Card 3: Enem Decodificado -->
+                <article class="project-card bg-slate-800 rounded-xl overflow-hidden border border-slate-700 shadow-lg flex flex-col h-full" data-aos="fade-up" data-aos-delay="200">
+                    <!-- Imagem do Projeto -->
+                    <div class="w-full h-48 overflow-hidden border-b border-slate-700">
+                        <img src="img/ENEM.png" alt="Preview do Projeto Enem" class="w-full h-full object-cover object-top transition-transform duration-500 hover:scale-110">
+                    </div>
+
+                    <div class="p-6 sm:p-8 space-y-4 flex-grow flex flex-col">
+                        <!-- Título -->
+                        <div class="flex items-center gap-3">
+                            <h3 class="text-xl font-bold text-gray-100">Enem Decodificado</h3>
+                        </div>
+                        
+                        <!-- Descrição -->
+                        <p class="text-gray-400 leading-relaxed text-sm">
+                            Plataforma interativa de análise de dados do ENEM, utilizando Tailwind CSS para uma interface 
+                            moderna e Chart.js para visualização dinâmica de estatísticas.
+                        </p>
+
+                        <!-- Destaques -->
+                        <div class="pt-2 flex-grow">
+                            <p class="text-sm font-semibold text-primary-400 mb-2">Principais Tecnologias:</p>
+                            <ul class="space-y-1 text-sm text-gray-400">
+                                <li class="flex items-center gap-2">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-primary-500"></span>
+                                    Tailwind CSS
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-primary-500"></span>
+                                    Chart.js (Visualização de Dados )
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-primary-500"></span>
+                                    Interface Interativa
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Botões de ação -->
+                        <div class="pt-4 flex flex-col sm:flex-row gap-3">
+                            <a href="https://github.com/fabiorodrigues12223/enem-decodificado" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            class="flex-1 px-4 py-2.5 bg-primary-600 hover:bg-primary-700 text-white rounded-lg font-medium text-center transition-colors duration-300">
+                                Ver Código
+                            </a>
+                            <a href="https://fabiorodrigues12223.github.io/enem-decodificado/"
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            class="flex-1 px-4 py-2.5 border border-primary-600 text-primary-400 hover:bg-primary-600/10 rounded-lg font-medium text-center transition-all duration-300">
+                                Ver Projeto
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                
+    
+    <!-- Footer / Contato -->
+    <footer id="contato" class="py-12 px-4 sm:px-6 lg:px-8 bg-slate-900/50 border-t border-slate-800">
+        <div class="container mx-auto max-w-4xl">
+            <div class="flex flex-col sm:flex-row justify-between items-center gap-6">
+                <!-- Links sociais -->
+                <div class="flex gap-6">
+                    <!-- LinkedIn -->
+                    <a href="https://www.linkedin.com/in/f%C3%A1bio-rodrigues1203/" target="_blank" rel="noopener noreferrer" 
+                       class="w-12 h-12 rounded-lg bg-slate-800 border border-slate-700 flex items-center justify-center text-gray-400 hover:text-primary-400 hover:border-primary-600 transition-all duration-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                    </a>
+                    
+                    <!-- GitHub -->
+                    <a href="https://github.com/fabiorodrigues12223" target="_blank" rel="noopener noreferrer" 
+                       class="w-12 h-12 rounded-lg bg-slate-800 border border-slate-700 flex items-center justify-center text-gray-400 hover:text-primary-400 hover:border-primary-600 transition-all duration-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                </div>
+                
+                <!-- Botão de copiar e-mail -->
+                <button id="copyEmailBtn" 
+                        class="px-6 py-3 bg-primary-600 hover:bg-primary-700 text-white rounded-lg font-medium transition-colors duration-300 flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                    </svg>
+                    <span>e-mail</span>
+                </button>
+            </div>
+            
+            <!-- Copyright -->
+            <div class="mt-8 pt-8 border-t border-slate-800 text-center text-sm text-gray-500">
+                <p>&copy; 2026 Fábio Rodrigues Costa. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript para funcionalidades interativas -->
+    <script src="app.js"></script>
+</body>
+</html>
